@@ -29,15 +29,20 @@ class _MainMenuState extends State<MainMenu> {
               horizontal: MediaQuery.of(context).size.width * 0.05,
               vertical: bottomBarHeight),
           child: Column(children: [
-            Expanded(flex: 1, child: Container()),
             Expanded(
-              flex: 1,
-              child: IconButton(
-                onPressed: (() {
-                  Navigator.pop(context);
-                }),
-                icon: const Icon(Icons.arrow_back),
-              ),
+              flex: 2,
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton(
+                      iconSize: 36,
+                      onPressed: (() {
+                        Navigator.pop(context);
+                      }),
+                      icon: const Icon(Icons.arrow_back),
+                    ),
+                    Container(),
+                  ]),
             ),
             const Expanded(
               flex: 2,
@@ -45,20 +50,28 @@ class _MainMenuState extends State<MainMenu> {
             ),
             Expanded(flex: 1, child: Container()),
             Expanded(
-              flex: 4,
+              flex: 5,
               child: Container(
+                padding: EdgeInsets.symmetric(
+                    horizontal: MediaQuery.of(context).size.width * 0.01,
+                    vertical: MediaQuery.of(context).size.height * 0.01),
+                width: MediaQuery.of(context).size.width * 1,
                 decoration: BoxDecoration(
-                    color: Colors.amber,
-                    border: Border.all(),
-                    borderRadius: BorderRadius.all(Radius.circular(20))),
+                    color: const Color.fromRGBO(57, 160, 216, 1),
+                    border: Border.all(
+                        color: const Color.fromRGBO(43, 115, 154, 1)),
+                    borderRadius: const BorderRadius.all(Radius.circular(20))),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     const Expanded(
+                        flex: 1,
                         child: Text(
-                      "Сценарии мероприятии",
-                      style: TextStyle(fontSize: 24),
-                    )),
-                    Expanded(child: Image.asset('assets/images/teacher.png'))
+                          "Сценарии мероприятии",
+                          style: TextStyle(fontSize: 24),
+                        )),
+                    Expanded(
+                        flex: 2, child: Image.asset('assets/images/list.png'))
                   ],
                 ),
               ),
@@ -72,15 +85,16 @@ class _MainMenuState extends State<MainMenu> {
                       flex: 10,
                       child: Container(
                         decoration: BoxDecoration(
-                            color: Colors.amber,
-                            border: Border.all(),
+                            color: const Color.fromRGBO(213, 196, 59, 1),
+                            border: Border.all(
+                                color: const Color.fromRGBO(149, 137, 41, 1)),
                             borderRadius:
-                                BorderRadius.all(Radius.circular(20))),
+                                const BorderRadius.all(Radius.circular(20))),
                         child: Column(
                           children: [
-                            Expanded(child: Text('Игры')),
+                            const Expanded(child: Text('Игры')),
                             Expanded(
-                              child: Image.asset('assets/images/teacher.png'),
+                              child: Image.asset('assets/images/cubes.png'),
                             )
                           ],
                         ),
@@ -91,15 +105,15 @@ class _MainMenuState extends State<MainMenu> {
                       flex: 10,
                       child: Container(
                         decoration: BoxDecoration(
-                            color: Colors.amber,
+                            color: const Color.fromRGBO(160, 188, 56, 1),
                             border: Border.all(),
                             borderRadius:
-                                BorderRadius.all(Radius.circular(20))),
+                                const BorderRadius.all(Radius.circular(20))),
                         child: Column(
                           children: [
-                            Expanded(child: Text('Конспекты занятии')),
+                            const Expanded(child: Text('Конспекты занятии')),
                             Expanded(
-                              child: Image.asset('assets/images/teacher.png'),
+                              child: Image.asset('assets/images/desk.png'),
                             )
                           ],
                         ),
@@ -117,12 +131,13 @@ class _MainMenuState extends State<MainMenu> {
                       decoration: BoxDecoration(
                           color: Colors.amber,
                           border: Border.all(),
-                          borderRadius: BorderRadius.all(Radius.circular(20))),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(20))),
                       child: Column(
                         children: [
-                          Expanded(child: Text('Игры')),
+                          const Expanded(child: Text('Шаблоны для рисования')),
                           Expanded(
-                            child: Image.asset('assets/images/teacher.png'),
+                            child: Image.asset('assets/images/shapes.png'),
                           )
                         ],
                       ),
@@ -135,12 +150,13 @@ class _MainMenuState extends State<MainMenu> {
                       decoration: BoxDecoration(
                           color: Colors.amber,
                           border: Border.all(),
-                          borderRadius: BorderRadius.all(Radius.circular(20))),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(20))),
                       child: Column(
                         children: [
-                          Expanded(child: Text('Конспекты занятии')),
+                          const Expanded(child: Text('Конспекты занятии')),
                           Expanded(
-                            child: Image.asset('assets/images/teacher.png'),
+                            child: Image.asset('assets/images/notes.png'),
                           )
                         ],
                       ),

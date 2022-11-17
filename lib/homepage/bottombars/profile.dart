@@ -46,9 +46,12 @@ class _ProfileState extends State<Profile> {
               flex: 1,
               child: Column(
                 children: const [
-                  Text('Номер телефона'),
-                  TextField(
-                    autofocus: false,
+                  Expanded(flex: 1, child: Text('Номер телефона')),
+                  Expanded(
+                    flex: 1,
+                    child: TextField(
+                      autofocus: false,
+                    ),
                   )
                 ],
               ),
@@ -57,8 +60,8 @@ class _ProfileState extends State<Profile> {
               flex: 1,
               child: Column(
                 children: const [
-                  Text('Номер телефона'),
-                  TextField(autofocus: false)
+                  Expanded(flex: 1, child: Text('Электронная почта')),
+                  Expanded(flex: 1, child: TextField(autofocus: false))
                 ],
               ),
             ),
@@ -66,8 +69,8 @@ class _ProfileState extends State<Profile> {
               flex: 1,
               child: Column(
                 children: const [
-                  Text('Номер телефона'),
-                  TextField(autofocus: false)
+                  Expanded(flex: 1, child: Text('Пароль')),
+                  Expanded(flex: 1, child: TextField(autofocus: false))
                 ],
               ),
             ),
@@ -75,9 +78,12 @@ class _ProfileState extends State<Profile> {
               flex: 1,
               child: Column(
                 children: const [
-                  Text('Номер телефона'),
-                  TextField(
-                    autofocus: false,
+                  Expanded(flex: 1, child: Text('Дата рождения')),
+                  Expanded(
+                    flex: 1,
+                    child: TextField(
+                      autofocus: false,
+                    ),
                   )
                 ],
               ),

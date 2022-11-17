@@ -77,9 +77,9 @@ class _HomeState extends State<Home> {
                         fontSize: 36,
                         color: Color.fromRGBO(118, 43, 1, 1)))),
           ),
-          Expanded(flex: 2, child: Container()),
+          Expanded(flex: 1, child: Container()),
           Expanded(
-              flex: 4,
+              flex: 3,
               child: Row(
                 children: [
                   Expanded(

@@ -14,7 +14,7 @@ class _KengaDrawerState extends State<KengaDrawer> {
     final double statusBarHeight = MediaQuery.of(context).padding.top;
     return Drawer(
       elevation: 0,
-      width: MediaQuery.of(context).size.width * 0.45,
+      width: MediaQuery.of(context).size.width * 0.5,
       backgroundColor: Colors.transparent,
       child: BackdropFilter(
         filter: ImageFilter.blur(
