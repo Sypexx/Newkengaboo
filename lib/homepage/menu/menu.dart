@@ -44,9 +44,9 @@ class _MainMenuState extends State<MainMenu> {
                     Container(),
                   ]),
             ),
-            const Expanded(
+            Expanded(
               flex: 2,
-              child: Text('Новый год', style: TextStyle(fontSize: 36)),
+              child: Image.asset('assets/images/textnewyear.png'),
             ),
             Expanded(flex: 1, child: Container()),
             Expanded(
@@ -64,12 +64,10 @@ class _MainMenuState extends State<MainMenu> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    const Expanded(
-                        flex: 1,
-                        child: Text(
-                          "Сценарии мероприятии",
-                          style: TextStyle(fontSize: 24),
-                        )),
+                    Expanded(
+                      flex: 1,
+                      child: Image.asset('assets/images/textmain.png'),
+                    ),
                     Expanded(
                         flex: 2, child: Image.asset('assets/images/list.png'))
                   ],
@@ -92,8 +90,13 @@ class _MainMenuState extends State<MainMenu> {
                                 const BorderRadius.all(Radius.circular(20))),
                         child: Column(
                           children: [
-                            const Expanded(child: Text('Игры')),
                             Expanded(
+                                flex: 1,
+                                child:
+                                    Image.asset('assets/images/textgame.png')),
+                            Expanded(flex: 1, child: Container()),
+                            Expanded(
+                              flex: 2,
                               child: Image.asset('assets/images/cubes.png'),
                             )
                           ],
@@ -106,13 +109,23 @@ class _MainMenuState extends State<MainMenu> {
                       child: Container(
                         decoration: BoxDecoration(
                             color: const Color.fromRGBO(160, 188, 56, 1),
-                            border: Border.all(),
+                            border: Border.all(
+                              color: const Color.fromRGBO(112, 132, 40, 1),
+                            ),
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(20))),
                         child: Column(
                           children: [
-                            const Expanded(child: Text('Конспекты занятии')),
                             Expanded(
+                                flex: 3,
+                                child:
+                                    Image.asset('assets/images/textpaint.png')),
+                            Expanded(
+                              flex: 1,
+                              child: Container(),
+                            ),
+                            Expanded(
+                              flex: 3,
                               child: Image.asset('assets/images/desk.png'),
                             )
                           ],
@@ -129,14 +142,20 @@ class _MainMenuState extends State<MainMenu> {
                     flex: 10,
                     child: Container(
                       decoration: BoxDecoration(
-                          color: Colors.amber,
-                          border: Border.all(),
+                          color: const Color.fromRGBO(220, 108, 55, 1),
+                          border: Border.all(
+                              color: const Color.fromRGBO(145, 76, 38, 1)),
                           borderRadius:
                               const BorderRadius.all(Radius.circular(20))),
                       child: Column(
                         children: [
-                          const Expanded(child: Text('Шаблоны для рисования')),
                           Expanded(
+                              flex: 3,
+                              child:
+                                  Image.asset('assets/images/textpaint.png')),
+                          Expanded(flex: 1, child: Container()),
+                          Expanded(
+                            flex: 3,
                             child: Image.asset('assets/images/shapes.png'),
                           )
                         ],
@@ -148,14 +167,20 @@ class _MainMenuState extends State<MainMenu> {
                     flex: 10,
                     child: Container(
                       decoration: BoxDecoration(
-                          color: Colors.amber,
-                          border: Border.all(),
+                          color: const Color.fromRGBO(149, 201, 196, 1),
+                          border: Border.all(
+                              color: const Color.fromRGBO(104, 141, 137, 1)),
                           borderRadius:
                               const BorderRadius.all(Radius.circular(20))),
                       child: Column(
                         children: [
-                          const Expanded(child: Text('Конспекты занятии')),
                           Expanded(
+                              flex: 3,
+                              child:
+                                  Image.asset('assets/images/texttasks.png')),
+                          Expanded(flex: 1, child: Container()),
+                          Expanded(
+                            flex: 3,
                             child: Image.asset('assets/images/notes.png'),
                           )
                         ],
