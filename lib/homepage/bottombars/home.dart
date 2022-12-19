@@ -39,7 +39,10 @@ class _HomeState extends State<Home> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => const MainMenu()));
+                          builder: (BuildContext context) => const MainMenu(
+                                mainlogo: 'assets/images/textnewyear.png',
+                                background: 'assets/images/back1.png',
+                              )));
                 },
                 child: const Text('· Новый год ·',
                     style: TextStyle(
@@ -50,7 +53,15 @@ class _HomeState extends State<Home> {
           Expanded(
             flex: 2,
             child: TextButton(
-                onPressed: (() {}),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) => const MainMenu(
+                                mainlogo: 'assets/images/23febrary.png',
+                                background: 'assets/images/back2.png',
+                              )));
+                },
                 child: const Text('· 23 февраля ·',
                     style: TextStyle(
                         fontFamily: 'Andika',
@@ -60,7 +71,15 @@ class _HomeState extends State<Home> {
           Expanded(
             flex: 2,
             child: TextButton(
-                onPressed: (() {}),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) => const MainMenu(
+                                mainlogo: 'assets/images/cosmos.png',
+                                background: 'assets/images/back3.png',
+                              )));
+                },
                 child: const Text('· Космос ·',
                     style: TextStyle(
                         fontFamily: 'Andika',
@@ -70,7 +89,15 @@ class _HomeState extends State<Home> {
           Expanded(
             flex: 2,
             child: TextButton(
-                onPressed: (() {}),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) => const MainMenu(
+                                mainlogo: 'assets/images/detskiysad.png',
+                                background: 'assets/images/back4.png',
+                              )));
+                },
                 child: const Text('· Детский сад ·',
                     style: TextStyle(
                         fontFamily: 'Andika',
@@ -83,9 +110,9 @@ class _HomeState extends State<Home> {
               child: Row(
                 children: [
                   Expanded(
-                      flex: 1, child: Image.asset('assets/images/teacher.png')),
+                      flex: 6, child: Image.asset('assets/images/teacher.png')),
                   Expanded(
-                      flex: 1,
+                      flex: 5,
                       child: Stack(
                         children: [
                           Center(child: Image.asset('assets/images/cloud.png')),

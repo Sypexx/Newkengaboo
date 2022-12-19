@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class MainMenu extends StatefulWidget {
-  const MainMenu({super.key});
+  const MainMenu({super.key, this.mainlogo, this.background});
 
+  final mainlogo;
+  final background;
   @override
   State<MainMenu> createState() => _MainMenuState();
 }
@@ -10,19 +12,24 @@ class MainMenu extends StatefulWidget {
 class _MainMenuState extends State<MainMenu> {
   @override
   Widget build(BuildContext context) {
-    final double bottomBarHeight = MediaQuery.of(context).padding.bottom;
+    final double bottomBarHeight = MediaQuery.of(context).padding.bottom * 0.97;
     return Stack(
       children: [
         Container(
-          decoration: const BoxDecoration(
-              gradient: LinearGradient(
-            begin: (Alignment.topRight),
-            end: Alignment.bottomLeft,
-            colors: [
-              Color.fromRGBO(255, 163, 96, 1),
-              Color.fromRGBO(255, 112, 7, 1)
-            ],
-          )),
+          margin: EdgeInsets.only(bottom: bottomBarHeight),
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  alignment: Alignment.bottomCenter,
+                  image: AssetImage(widget.background),
+                  fit: BoxFit.contain),
+              gradient: const LinearGradient(
+                begin: (Alignment.topRight),
+                end: Alignment.bottomLeft,
+                colors: [
+                  Color.fromRGBO(255, 163, 96, 1),
+                  Color.fromRGBO(255, 112, 7, 1)
+                ],
+              )),
         ),
         Container(
           padding: EdgeInsets.symmetric(
@@ -46,7 +53,7 @@ class _MainMenuState extends State<MainMenu> {
             ),
             Expanded(
               flex: 2,
-              child: Image.asset('assets/images/textnewyear.png'),
+              child: Image.asset(widget.mainlogo),
             ),
             Expanded(flex: 1, child: Container()),
             Expanded(
@@ -83,9 +90,9 @@ class _MainMenuState extends State<MainMenu> {
                       flex: 10,
                       child: Container(
                         decoration: BoxDecoration(
-                            color: const Color.fromRGBO(213, 196, 59, 1),
+                            color: const Color.fromRGBO(213, 196, 59, 0.9),
                             border: Border.all(
-                                color: const Color.fromRGBO(149, 137, 41, 1)),
+                                color: const Color.fromRGBO(149, 137, 41, 0.9)),
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(20))),
                         child: Column(
@@ -108,9 +115,9 @@ class _MainMenuState extends State<MainMenu> {
                       flex: 10,
                       child: Container(
                         decoration: BoxDecoration(
-                            color: const Color.fromRGBO(160, 188, 56, 1),
+                            color: const Color.fromRGBO(160, 188, 56, 0.9),
                             border: Border.all(
-                              color: const Color.fromRGBO(112, 132, 40, 1),
+                              color: const Color.fromRGBO(112, 132, 40, 0.9),
                             ),
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(20))),
@@ -142,9 +149,9 @@ class _MainMenuState extends State<MainMenu> {
                     flex: 10,
                     child: Container(
                       decoration: BoxDecoration(
-                          color: const Color.fromRGBO(220, 108, 55, 1),
+                          color: const Color.fromRGBO(220, 108, 55, 0.9),
                           border: Border.all(
-                              color: const Color.fromRGBO(145, 76, 38, 1)),
+                              color: const Color.fromRGBO(145, 76, 38, 0.9)),
                           borderRadius:
                               const BorderRadius.all(Radius.circular(20))),
                       child: Column(
@@ -167,9 +174,9 @@ class _MainMenuState extends State<MainMenu> {
                     flex: 10,
                     child: Container(
                       decoration: BoxDecoration(
-                          color: const Color.fromRGBO(149, 201, 196, 1),
+                          color: const Color.fromRGBO(149, 201, 196, 0.9),
                           border: Border.all(
-                              color: const Color.fromRGBO(104, 141, 137, 1)),
+                              color: const Color.fromRGBO(104, 141, 137, 0.9)),
                           borderRadius:
                               const BorderRadius.all(Radius.circular(20))),
                       child: Column(
