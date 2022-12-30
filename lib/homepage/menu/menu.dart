@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kengaboo/homepage/menu/choose.dart';
 
 class MainMenu extends StatefulWidget {
   const MainMenu({super.key, this.mainlogo, this.background});
@@ -58,26 +59,38 @@ class _MainMenuState extends State<MainMenu> {
             Expanded(flex: 1, child: Container()),
             Expanded(
               flex: 5,
-              child: Container(
-                padding: EdgeInsets.symmetric(
-                    horizontal: MediaQuery.of(context).size.width * 0.01,
-                    vertical: MediaQuery.of(context).size.height * 0.01),
-                width: MediaQuery.of(context).size.width * 1,
-                decoration: BoxDecoration(
-                    color: const Color.fromRGBO(57, 160, 216, 1),
-                    border: Border.all(
-                        color: const Color.fromRGBO(43, 115, 154, 1)),
-                    borderRadius: const BorderRadius.all(Radius.circular(20))),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Expanded(
-                      flex: 1,
-                      child: Image.asset('assets/images/textmain.png'),
-                    ),
-                    Expanded(
-                        flex: 2, child: Image.asset('assets/images/list.png'))
-                  ],
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) => const Choose(
+                                mainlogo: 'assets/images/detskiysad.png',
+                                background: 'assets/images/back4.png',
+                              )));
+                },
+                child: Container(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: MediaQuery.of(context).size.width * 0.01,
+                      vertical: MediaQuery.of(context).size.height * 0.01),
+                  width: MediaQuery.of(context).size.width * 1,
+                  decoration: BoxDecoration(
+                      color: const Color.fromRGBO(57, 160, 216, 1),
+                      border: Border.all(
+                          color: const Color.fromRGBO(43, 115, 154, 1)),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(20))),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Expanded(
+                        flex: 1,
+                        child: Image.asset('assets/images/textmain.png'),
+                      ),
+                      Expanded(
+                          flex: 2, child: Image.asset('assets/images/list.png'))
+                    ],
+                  ),
                 ),
               ),
             ),
