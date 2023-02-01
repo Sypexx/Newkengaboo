@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kengaboo/homepage/menu/menu.dart';
+import 'package:kengaboo/homepage/data/content.dart' as globals;
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -36,13 +37,11 @@ class _HomeState extends State<Home> {
             flex: 2,
             child: TextButton(
                 onPressed: () {
+                  globals.choosedTheme = 0;
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => const MainMenu(
-                                mainlogo: 'assets/images/textnewyear.png',
-                                background: 'assets/images/back1.png',
-                              )));
+                          builder: (BuildContext context) => const MainMenu()));
                 },
                 child: const Text('· Новый год ·',
                     style: TextStyle(
@@ -54,13 +53,11 @@ class _HomeState extends State<Home> {
             flex: 2,
             child: TextButton(
                 onPressed: () {
+                  globals.choosedTheme = 1;
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => const MainMenu(
-                                mainlogo: 'assets/images/23febrary.png',
-                                background: 'assets/images/back2.png',
-                              )));
+                          builder: (BuildContext context) => const MainMenu()));
                 },
                 child: const Text('· 23 февраля ·',
                     style: TextStyle(
@@ -72,13 +69,11 @@ class _HomeState extends State<Home> {
             flex: 2,
             child: TextButton(
                 onPressed: () {
+                  globals.choosedTheme = 2;
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => const MainMenu(
-                                mainlogo: 'assets/images/cosmos.png',
-                                background: 'assets/images/back3.png',
-                              )));
+                          builder: (BuildContext context) => const MainMenu()));
                 },
                 child: const Text('· Космос ·',
                     style: TextStyle(
@@ -90,13 +85,11 @@ class _HomeState extends State<Home> {
             flex: 2,
             child: TextButton(
                 onPressed: () {
+                  globals.choosedTheme = 3;
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => const MainMenu(
-                                mainlogo: 'assets/images/detskiysad.png',
-                                background: 'assets/images/back4.png',
-                              )));
+                          builder: (BuildContext context) => const MainMenu()));
                 },
                 child: const Text('· Детский сад ·',
                     style: TextStyle(

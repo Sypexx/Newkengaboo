@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kengaboo/homepage/menu/textview.dart';
 
 class Choose extends StatefulWidget {
   const Choose({super.key, this.mainlogo, this.background});
@@ -37,7 +38,7 @@ class _ChooseState extends State<Choose> {
               vertical: bottomBarHeight),
           child: Column(children: [
             Expanded(
-              flex: 1,
+              flex: 2,
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -51,7 +52,84 @@ class _ChooseState extends State<Choose> {
                     Container(),
                   ]),
             ),
-            Expanded(flex: 10, child: Text('asdasdsda')),
+            Expanded(flex: 2, child: Image.asset('assets/images/textmain.png')),
+            Expanded(flex: 2, child: Container()),
+            Expanded(
+              flex: 18,
+              child: Column(
+                children: [
+                  Expanded(flex: 1, child: Container()),
+                  Expanded(
+                    flex: 2,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const TextView(
+                                      mainlogo: 'assets/images/scenario11.png',
+                                      background: 'assets/images/back4.png',
+                                    )));
+                      },
+                      child: Image.asset('assets/images/scenario1.png'),
+                    ),
+                  ),
+                  Expanded(flex: 1, child: Container()),
+                  Expanded(
+                    flex: 2,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const TextView(
+                                      mainlogo: 'assets/images/textmain.png',
+                                      background: 'assets/images/back4.png',
+                                    )));
+                      },
+                      child: Image.asset('assets/images/scenario2.png'),
+                    ),
+                  ),
+                  Expanded(flex: 1, child: Container()),
+                  Expanded(
+                    flex: 2,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const TextView(
+                                      mainlogo: 'assets/images/textmain.png',
+                                      background: 'assets/images/back4.png',
+                                    )));
+                      },
+                      child: Image.asset('assets/images/scenario3.png'),
+                    ),
+                  ),
+                  Expanded(flex: 1, child: Container()),
+                  Expanded(
+                    flex: 2,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const TextView(
+                                      mainlogo: 'assets/images/textmain.png',
+                                      background: 'assets/images/back4.png',
+                                    )));
+                      },
+                      child: Image.asset('assets/images/scenario4.png'),
+                    ),
+                  ),
+                  Expanded(flex: 5, child: Container()),
+                ],
+              ),
+            ),
             Expanded(flex: 4, child: Container()),
           ]),
         )

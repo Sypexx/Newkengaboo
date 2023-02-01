@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:kengaboo/homepage/menu/choose.dart';
+import 'package:kengaboo/homepage/data/content.dart' as globals;
 
 class MainMenu extends StatefulWidget {
-  const MainMenu({super.key, this.mainlogo, this.background});
-
-  final mainlogo;
-  final background;
+  const MainMenu({super.key});
   @override
   State<MainMenu> createState() => _MainMenuState();
 }
@@ -13,6 +11,7 @@ class MainMenu extends StatefulWidget {
 class _MainMenuState extends State<MainMenu> {
   @override
   Widget build(BuildContext context) {
+    globals.changeTheme();
     final double bottomBarHeight = MediaQuery.of(context).padding.bottom * 0.97;
     return Stack(
       children: [
@@ -21,7 +20,7 @@ class _MainMenuState extends State<MainMenu> {
           decoration: BoxDecoration(
               image: DecorationImage(
                   alignment: Alignment.bottomCenter,
-                  image: AssetImage(widget.background),
+                  image: AssetImage(globals.backGround),
                   fit: BoxFit.contain),
               gradient: const LinearGradient(
                 begin: (Alignment.topRight),
@@ -54,7 +53,7 @@ class _MainMenuState extends State<MainMenu> {
             ),
             Expanded(
               flex: 2,
-              child: Image.asset(widget.mainlogo),
+              child: Image.asset(globals.themeTitle),
             ),
             Expanded(flex: 1, child: Container()),
             Expanded(
@@ -65,7 +64,6 @@ class _MainMenuState extends State<MainMenu> {
                       context,
                       MaterialPageRoute(
                           builder: (BuildContext context) => const Choose(
-                                mainlogo: 'assets/images/detskiysad.png',
                                 background: 'assets/images/back4.png',
                               )));
                 },
