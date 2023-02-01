@@ -60,12 +60,11 @@ class _MainMenuState extends State<MainMenu> {
               flex: 5,
               child: InkWell(
                 onTap: () {
+                  globals.categoryid = 0;
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => const Choose(
-                                background: 'assets/images/back4.png',
-                              )));
+                          builder: (BuildContext context) => const Choose()));
                 },
                 child: Container(
                   padding: EdgeInsets.symmetric(
@@ -135,15 +134,15 @@ class _MainMenuState extends State<MainMenu> {
                         child: Column(
                           children: [
                             Expanded(
-                                flex: 3,
+                                flex: 5,
                                 child:
-                                    Image.asset('assets/images/textpaint.png')),
+                                    Image.asset('assets/images/texttasks.png')),
                             Expanded(
                               flex: 1,
                               child: Container(),
                             ),
                             Expanded(
-                              flex: 3,
+                              flex: 4,
                               child: Image.asset('assets/images/desk.png'),
                             )
                           ],
@@ -193,12 +192,12 @@ class _MainMenuState extends State<MainMenu> {
                       child: Column(
                         children: [
                           Expanded(
-                              flex: 3,
+                              flex: 1,
                               child:
-                                  Image.asset('assets/images/texttasks.png')),
-                          Expanded(flex: 1, child: Container()),
+                                  Image.asset('assets/images/textsongs.png')),
+                          Expanded(flex: 2, child: Container()),
                           Expanded(
-                            flex: 3,
+                            flex: 2,
                             child: Image.asset('assets/images/notes.png'),
                           )
                         ],

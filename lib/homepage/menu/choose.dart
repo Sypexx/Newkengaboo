@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:kengaboo/homepage/menu/textview.dart';
+import 'package:kengaboo/homepage/data/content.dart' as globals;
 
 class Choose extends StatefulWidget {
-  const Choose({super.key, this.mainlogo, this.background});
+  const Choose({super.key});
 
-  final mainlogo;
-  final background;
   @override
   State<Choose> createState() => _ChooseState();
 }
@@ -13,6 +12,7 @@ class Choose extends StatefulWidget {
 class _ChooseState extends State<Choose> {
   @override
   Widget build(BuildContext context) {
+    globals.applycat();
     final double bottomBarHeight = MediaQuery.of(context).padding.bottom * 0.97;
     return Stack(
       children: [
@@ -21,7 +21,7 @@ class _ChooseState extends State<Choose> {
           decoration: BoxDecoration(
               image: DecorationImage(
                   alignment: Alignment.bottomCenter,
-                  image: AssetImage(widget.background),
+                  image: AssetImage(globals.backGround),
                   fit: BoxFit.contain),
               gradient: const LinearGradient(
                 begin: (Alignment.topRight),
@@ -52,7 +52,7 @@ class _ChooseState extends State<Choose> {
                     Container(),
                   ]),
             ),
-            Expanded(flex: 2, child: Image.asset('assets/images/textmain.png')),
+            Expanded(flex: 2, child: Image.asset(globals.categoryTitle)),
             Expanded(flex: 2, child: Container()),
             Expanded(
               flex: 18,
@@ -67,12 +67,9 @@ class _ChooseState extends State<Choose> {
                             context,
                             MaterialPageRoute(
                                 builder: (BuildContext context) =>
-                                    const TextView(
-                                      mainlogo: 'assets/images/scenario11.png',
-                                      background: 'assets/images/back4.png',
-                                    )));
+                                    const TextView()));
                       },
-                      child: Image.asset('assets/images/scenario1.png'),
+                      child: Image.asset(globals.categories[0]),
                     ),
                   ),
                   Expanded(flex: 1, child: Container()),
@@ -84,12 +81,9 @@ class _ChooseState extends State<Choose> {
                             context,
                             MaterialPageRoute(
                                 builder: (BuildContext context) =>
-                                    const TextView(
-                                      mainlogo: 'assets/images/textmain.png',
-                                      background: 'assets/images/back4.png',
-                                    )));
+                                    const TextView()));
                       },
-                      child: Image.asset('assets/images/scenario2.png'),
+                      child: Image.asset(globals.categories[1]),
                     ),
                   ),
                   Expanded(flex: 1, child: Container()),
@@ -101,12 +95,9 @@ class _ChooseState extends State<Choose> {
                             context,
                             MaterialPageRoute(
                                 builder: (BuildContext context) =>
-                                    const TextView(
-                                      mainlogo: 'assets/images/textmain.png',
-                                      background: 'assets/images/back4.png',
-                                    )));
+                                    const TextView()));
                       },
-                      child: Image.asset('assets/images/scenario3.png'),
+                      child: Image.asset(globals.categories[2]),
                     ),
                   ),
                   Expanded(flex: 1, child: Container()),
@@ -118,12 +109,9 @@ class _ChooseState extends State<Choose> {
                             context,
                             MaterialPageRoute(
                                 builder: (BuildContext context) =>
-                                    const TextView(
-                                      mainlogo: 'assets/images/textmain.png',
-                                      background: 'assets/images/back4.png',
-                                    )));
+                                    const TextView()));
                       },
-                      child: Image.asset('assets/images/scenario4.png'),
+                      child: Image.asset(globals.categories[3]),
                     ),
                   ),
                   Expanded(flex: 5, child: Container()),

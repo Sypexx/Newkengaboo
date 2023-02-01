@@ -2,13 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:kengaboo/homepage/menu/choose.dart';
 import 'package:kengaboo/homepage/data/texts.dart';
 import 'package:kengaboo/homepage/data/chooses.dart';
+import 'package:kengaboo/homepage/data/content.dart' as globals;
 
 class TextView extends StatefulWidget {
-  const TextView({super.key, this.mainlogo, this.background, this.content});
+  const TextView({super.key});
 
-  final mainlogo;
-  final background;
-  final content;
   @override
   State<TextView> createState() => _TextViewState();
 }
@@ -76,7 +74,7 @@ class _TextViewState extends State<TextView> {
                     Text(
                       SomeText.scenario[0],
                       textAlign: TextAlign.center,
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: Colors.black,
                           fontSize: 14,
                           fontWeight: FontWeight.w500),
