@@ -63,6 +63,7 @@ class _ChooseState extends State<Choose> {
                     flex: 2,
                     child: InkWell(
                       onTap: () {
+                        globals.viewid = 0;
                         Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -77,6 +78,7 @@ class _ChooseState extends State<Choose> {
                     flex: 2,
                     child: InkWell(
                       onTap: () {
+                        globals.viewid = 1;
                         Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -91,6 +93,7 @@ class _ChooseState extends State<Choose> {
                     flex: 2,
                     child: InkWell(
                       onTap: () {
+                        globals.viewid = 2;
                         Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -105,6 +108,7 @@ class _ChooseState extends State<Choose> {
                     flex: 2,
                     child: InkWell(
                       onTap: () {
+                        globals.viewid = 3;
                         Navigator.push(
                             context,
                             MaterialPageRoute(

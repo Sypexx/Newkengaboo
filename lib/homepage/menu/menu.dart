@@ -98,54 +98,75 @@ class _MainMenuState extends State<MainMenu> {
                   children: [
                     Expanded(
                       flex: 10,
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: const Color.fromRGBO(213, 196, 59, 0.9),
-                            border: Border.all(
-                                color: const Color.fromRGBO(149, 137, 41, 0.9)),
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(20))),
-                        child: Column(
-                          children: [
-                            Expanded(
-                                flex: 1,
-                                child:
-                                    Image.asset('assets/images/textgame.png')),
-                            Expanded(flex: 1, child: Container()),
-                            Expanded(
-                              flex: 2,
-                              child: Image.asset('assets/images/cubes.png'),
-                            )
-                          ],
+                      child: InkWell(
+                        onTap: () {
+                          globals.categoryid = 1;
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      const Choose()));
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: const Color.fromRGBO(213, 196, 59, 0.9),
+                              border: Border.all(
+                                  color:
+                                      const Color.fromRGBO(149, 137, 41, 0.9)),
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(20))),
+                          child: Column(
+                            children: [
+                              Expanded(
+                                  flex: 1,
+                                  child: Image.asset(
+                                      'assets/images/textgame.png')),
+                              Expanded(flex: 1, child: Container()),
+                              Expanded(
+                                flex: 2,
+                                child: Image.asset('assets/images/cubes.png'),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
                     Expanded(flex: 1, child: Container()),
                     Expanded(
                       flex: 10,
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: const Color.fromRGBO(160, 188, 56, 0.9),
-                            border: Border.all(
-                              color: const Color.fromRGBO(112, 132, 40, 0.9),
-                            ),
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(20))),
-                        child: Column(
-                          children: [
-                            Expanded(
-                                flex: 5,
-                                child:
-                                    Image.asset('assets/images/texttasks.png')),
-                            Expanded(
-                              flex: 1,
-                              child: Container(),
-                            ),
-                            Expanded(
-                              flex: 4,
-                              child: Image.asset('assets/images/desk.png'),
-                            )
-                          ],
+                      child: InkWell(
+                        onTap: () {
+                          globals.categoryid = 2;
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      const Choose()));
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: const Color.fromRGBO(160, 188, 56, 0.9),
+                              border: Border.all(
+                                color: const Color.fromRGBO(112, 132, 40, 0.9),
+                              ),
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(20))),
+                          child: Column(
+                            children: [
+                              Expanded(
+                                  flex: 5,
+                                  child: Image.asset(
+                                      'assets/images/texttasks.png')),
+                              Expanded(
+                                flex: 1,
+                                child: Container(),
+                              ),
+                              Expanded(
+                                flex: 4,
+                                child: Image.asset('assets/images/desk.png'),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -157,50 +178,71 @@ class _MainMenuState extends State<MainMenu> {
                 child: Row(children: [
                   Expanded(
                     flex: 10,
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: const Color.fromRGBO(220, 108, 55, 0.9),
-                          border: Border.all(
-                              color: const Color.fromRGBO(145, 76, 38, 0.9)),
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(20))),
-                      child: Column(
-                        children: [
-                          Expanded(
+                    child: InkWell(
+                      onTap: () {
+                        globals.categoryid = 3;
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const Choose()));
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: const Color.fromRGBO(220, 108, 55, 0.9),
+                            border: Border.all(
+                                color: const Color.fromRGBO(145, 76, 38, 0.9)),
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(20))),
+                        child: Column(
+                          children: [
+                            Expanded(
+                                flex: 3,
+                                child:
+                                    Image.asset('assets/images/textpaint.png')),
+                            Expanded(flex: 1, child: Container()),
+                            Expanded(
                               flex: 3,
-                              child:
-                                  Image.asset('assets/images/textpaint.png')),
-                          Expanded(flex: 1, child: Container()),
-                          Expanded(
-                            flex: 3,
-                            child: Image.asset('assets/images/shapes.png'),
-                          )
-                        ],
+                              child: Image.asset('assets/images/shapes.png'),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ),
                   Expanded(flex: 1, child: Container()),
                   Expanded(
                     flex: 10,
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: const Color.fromRGBO(149, 201, 196, 0.9),
-                          border: Border.all(
-                              color: const Color.fromRGBO(104, 141, 137, 0.9)),
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(20))),
-                      child: Column(
-                        children: [
-                          Expanded(
-                              flex: 1,
-                              child:
-                                  Image.asset('assets/images/textsongs.png')),
-                          Expanded(flex: 2, child: Container()),
-                          Expanded(
-                            flex: 2,
-                            child: Image.asset('assets/images/notes.png'),
-                          )
-                        ],
+                    child: InkWell(
+                      onTap: () {
+                        globals.categoryid = 4;
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const Choose()));
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: const Color.fromRGBO(149, 201, 196, 0.9),
+                            border: Border.all(
+                                color:
+                                    const Color.fromRGBO(104, 141, 137, 0.9)),
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(20))),
+                        child: Column(
+                          children: [
+                            Expanded(
+                                flex: 1,
+                                child:
+                                    Image.asset('assets/images/textsongs.png')),
+                            Expanded(flex: 2, child: Container()),
+                            Expanded(
+                              flex: 2,
+                              child: Image.asset('assets/images/notes.png'),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ),

@@ -14,6 +14,7 @@ class TextView extends StatefulWidget {
 class _TextViewState extends State<TextView> {
   @override
   Widget build(BuildContext context) {
+    globals.currentView();
     final double bottomBarHeight = MediaQuery.of(context).padding.bottom * 0.97;
     return Stack(children: [
       Container(
@@ -21,7 +22,7 @@ class _TextViewState extends State<TextView> {
         decoration: BoxDecoration(
             image: DecorationImage(
                 alignment: Alignment.bottomCenter,
-                image: AssetImage(widget.background),
+                image: AssetImage(globals.backGround),
                 fit: BoxFit.contain),
             gradient: const LinearGradient(
               begin: (Alignment.topRight),
@@ -55,7 +56,7 @@ class _TextViewState extends State<TextView> {
           ),
           Expanded(
             flex: 2,
-            child: Image.asset(widget.mainlogo),
+            child: Image.asset(globals.viewTitle),
           ),
           Expanded(flex: 1, child: Container()),
           Expanded(
