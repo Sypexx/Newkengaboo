@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:kengaboo/homepage/menu/menu.dart';
 import 'package:kengaboo/homepage/data/content.dart' as globals;
@@ -34,68 +35,199 @@ class _HomeState extends State<Home> {
                       fontSize: 36,
                       color: Color.fromRGBO(118, 43, 1, 1)))),
           Expanded(
-            flex: 2,
-            child: TextButton(
-                onPressed: () {
-                  globals.choosedTheme = 0;
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (BuildContext context) => const MainMenu()));
-                },
-                child: const Text('· Новый год ·',
-                    style: TextStyle(
-                        fontFamily: 'Andika',
-                        fontSize: 36,
-                        color: Color.fromRGBO(118, 43, 1, 1)))),
-          ),
-          Expanded(
-            flex: 2,
-            child: TextButton(
-                onPressed: () {
-                  globals.choosedTheme = 1;
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (BuildContext context) => const MainMenu()));
-                },
-                child: const Text('· 23 февраля ·',
-                    style: TextStyle(
-                        fontFamily: 'Andika',
-                        fontSize: 36,
-                        color: Color.fromRGBO(118, 43, 1, 1)))),
-          ),
-          Expanded(
-            flex: 2,
-            child: TextButton(
-                onPressed: () {
-                  globals.choosedTheme = 2;
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (BuildContext context) => const MainMenu()));
-                },
-                child: const Text('· Космос ·',
-                    style: TextStyle(
-                        fontFamily: 'Andika',
-                        fontSize: 36,
-                        color: Color.fromRGBO(118, 43, 1, 1)))),
-          ),
-          Expanded(
-            flex: 2,
-            child: TextButton(
-                onPressed: () {
-                  globals.choosedTheme = 3;
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (BuildContext context) => const MainMenu()));
-                },
-                child: const Text('· Детский сад ·',
-                    style: TextStyle(
-                        fontFamily: 'Andika',
-                        fontSize: 36,
-                        color: Color.fromRGBO(118, 43, 1, 1)))),
+            flex: 7,
+            child: CupertinoScrollbar(
+              isAlwaysShown: true,
+              child: ListView(children: [
+                Expanded(
+                  flex: 2,
+                  child: TextButton(
+                      onPressed: () {
+                        globals.choosedTheme = 0;
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const MainMenu()));
+                      },
+                      child: const Text('· Новый год ·',
+                          style: TextStyle(
+                              fontFamily: 'Andika',
+                              fontSize: 36,
+                              color: Color.fromRGBO(118, 43, 1, 1)))),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: TextButton(
+                      onPressed: () {
+                        globals.choosedTheme = 1;
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const MainMenu()));
+                      },
+                      child: const Text('· 23 февраля ·',
+                          style: TextStyle(
+                              fontFamily: 'Andika',
+                              fontSize: 36,
+                              color: Color.fromRGBO(118, 43, 1, 1)))),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: TextButton(
+                      onPressed: () {
+                        globals.choosedTheme = 2;
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const MainMenu()));
+                      },
+                      child: const Text('· 8 Марта ·',
+                          style: TextStyle(
+                              fontFamily: 'Andika',
+                              fontSize: 36,
+                              color: Color.fromRGBO(118, 43, 1, 1)))),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: TextButton(
+                      onPressed: () {
+                        globals.choosedTheme = 3;
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const MainMenu()));
+                      },
+                      child: const Text('· Космос ·',
+                          style: TextStyle(
+                              fontFamily: 'Andika',
+                              fontSize: 36,
+                              color: Color.fromRGBO(118, 43, 1, 1)))),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: TextButton(
+                      onPressed: () {
+                        globals.choosedTheme = 4;
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const MainMenu()));
+                      },
+                      child: const Text('· Детский сад ·',
+                          style: TextStyle(
+                              fontFamily: 'Andika',
+                              fontSize: 36,
+                              color: Color.fromRGBO(118, 43, 1, 1)))),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: TextButton(
+                      onPressed: () {
+                        globals.choosedTheme = 5;
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const MainMenu()));
+                      },
+                      child: const Text('· Растения ·',
+                          style: TextStyle(
+                              fontFamily: 'Andika',
+                              fontSize: 36,
+                              color: Color.fromRGBO(118, 43, 1, 1)))),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: TextButton(
+                      onPressed: () {
+                        globals.choosedTheme = 6;
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const MainMenu()));
+                      },
+                      child: const Text('· Семья ·',
+                          style: TextStyle(
+                              fontFamily: 'Andika',
+                              fontSize: 36,
+                              color: Color.fromRGBO(118, 43, 1, 1)))),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: TextButton(
+                      onPressed: () {
+                        globals.choosedTheme = 7;
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const MainMenu()));
+                      },
+                      child: const Text('· Транспорт ·',
+                          style: TextStyle(
+                              fontFamily: 'Andika',
+                              fontSize: 36,
+                              color: Color.fromRGBO(118, 43, 1, 1)))),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: TextButton(
+                      onPressed: () {
+                        globals.choosedTheme = 8;
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const MainMenu()));
+                      },
+                      child: const Text('· Мебель ·',
+                          style: TextStyle(
+                              fontFamily: 'Andika',
+                              fontSize: 36,
+                              color: Color.fromRGBO(118, 43, 1, 1)))),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: TextButton(
+                      onPressed: () {
+                        globals.choosedTheme = 9;
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const MainMenu()));
+                      },
+                      child: const Text('· Лето ·',
+                          style: TextStyle(
+                              fontFamily: 'Andika',
+                              fontSize: 36,
+                              color: Color.fromRGBO(118, 43, 1, 1)))),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: TextButton(
+                      onPressed: () {
+                        globals.choosedTheme = 10;
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const MainMenu()));
+                      },
+                      child: const Text('· Осень ·',
+                          style: TextStyle(
+                              fontFamily: 'Andika',
+                              fontSize: 36,
+                              color: Color.fromRGBO(118, 43, 1, 1)))),
+                ),
+              ]),
+            ),
           ),
           Expanded(flex: 1, child: Container()),
           Expanded(

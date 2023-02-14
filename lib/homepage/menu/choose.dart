@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:kengaboo/homepage/menu/textview.dart';
 import 'package:kengaboo/homepage/data/content.dart' as globals;
 
+import '../data/content.dart';
+
 class Choose extends StatefulWidget {
   const Choose({super.key});
 
@@ -52,7 +54,7 @@ class _ChooseState extends State<Choose> {
                     Container(),
                   ]),
             ),
-            Expanded(flex: 2, child: Image.asset(globals.categoryTitle)),
+            Expanded(flex: 3, child: Image.asset(globals.categoryTitle)),
             Expanded(flex: 2, child: Container()),
             Expanded(
               flex: 18,
@@ -64,6 +66,8 @@ class _ChooseState extends State<Choose> {
                     child: InkWell(
                       onTap: () {
                         globals.viewid = 0;
+                        globals.textid = 0;
+                        ChooseText();
                         Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -79,6 +83,8 @@ class _ChooseState extends State<Choose> {
                     child: InkWell(
                       onTap: () {
                         globals.viewid = 1;
+                        globals.textid = 1;
+                        ChooseText();
                         Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -94,6 +100,8 @@ class _ChooseState extends State<Choose> {
                     child: InkWell(
                       onTap: () {
                         globals.viewid = 2;
+                        globals.textid = 2;
+                        ChooseText();
                         Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -109,6 +117,8 @@ class _ChooseState extends State<Choose> {
                     child: InkWell(
                       onTap: () {
                         globals.viewid = 3;
+                        globals.textid = 3;
+                        ChooseText();
                         Navigator.push(
                             context,
                             MaterialPageRoute(

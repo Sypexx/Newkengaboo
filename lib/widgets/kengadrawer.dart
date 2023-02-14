@@ -35,16 +35,38 @@ class _KengaDrawerState extends State<KengaDrawer> {
             ),
             Column(
               children: [
-                TextButton(onPressed: (() {}), child: Text('asdasd')),
-                TextButton(onPressed: (() {}), child: Text('asdasd')),
-                TextButton(onPressed: (() {}), child: Text('asdasd')),
-                TextButton(onPressed: (() {}), child: Text('asdasd')),
-                TextButton(onPressed: (() {}), child: Text('asdasd')),
+                TextButton(
+                    onPressed: (() {}),
+                    child: const Text(
+                      'Профиль',
+                      style: TextStyle(color: Colors.black),
+                    )),
+                TextButton(
+                    onPressed: (() {}),
+                    child: const Text(
+                      'Настройки',
+                      style: TextStyle(color: Colors.black),
+                    )),
+                TextButton(
+                    onPressed: (() {}),
+                    child: const Text(
+                      'Контакты',
+                      style: TextStyle(color: Colors.black),
+                    )),
+                TextButton(
+                    onPressed: (() {}),
+                    child: const Text(
+                      'Частые вопросы',
+                      style: TextStyle(color: Colors.black),
+                    )),
+                TextButton(
+                    onPressed: (() {}),
+                    child: const Text(
+                      'О версии',
+                      style: TextStyle(color: Colors.black),
+                    )),
               ],
             ),
-            Row(
-              children: const [Text('Выйти'), Icon(Icons.logout_outlined)],
-            )
           ]),
         ),
       ),

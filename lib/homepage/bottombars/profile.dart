@@ -30,28 +30,23 @@ class _ProfileState extends State<Profile> {
             Expanded(
               flex: 2,
               child: Column(
-                children: const [
-                  Expanded(
-                    flex: 5,
-                    child: CircleAvatar(
-                      backgroundColor: Colors.red,
-                    ),
-                  ),
-                  Expanded(flex: 1, child: Text('Фамилия Имя')),
-                ],
+                children: const [],
               ),
             ),
             Expanded(flex: 1, child: Container()),
             Expanded(
               flex: 1,
               child: Column(
-                children: const [
-                  Expanded(flex: 1, child: Text('Номер телефона')),
+                children: [
+                  const Expanded(
+                      flex: 1,
+                      child: Text(
+                        'Номер телефона',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )),
                   Expanded(
                     flex: 1,
-                    child: TextField(
-                      autofocus: false,
-                    ),
+                    child: Container(),
                   )
                 ],
               ),
@@ -59,32 +54,42 @@ class _ProfileState extends State<Profile> {
             Expanded(
               flex: 1,
               child: Column(
-                children: const [
-                  Expanded(flex: 1, child: Text('Электронная почта')),
-                  Expanded(flex: 1, child: TextField(autofocus: false))
+                children: [
+                  const Expanded(
+                      flex: 1,
+                      child: Text(
+                        'Электронная почта',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )),
+                  Expanded(flex: 1, child: Container())
                 ],
               ),
             ),
             Expanded(
               flex: 1,
               child: Column(
-                children: const [
-                  Expanded(flex: 1, child: Text('Пароль')),
-                  Expanded(flex: 1, child: TextField(autofocus: false))
+                children: [
+                  const Expanded(
+                      flex: 1,
+                      child: Text(
+                        'Пароль',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )),
+                  Expanded(flex: 1, child: Container())
                 ],
               ),
             ),
             Expanded(
               flex: 1,
               child: Column(
-                children: const [
-                  Expanded(flex: 1, child: Text('Дата рождения')),
-                  Expanded(
-                    flex: 1,
-                    child: TextField(
-                      autofocus: false,
-                    ),
-                  )
+                children: [
+                  const Expanded(
+                      flex: 1,
+                      child: Text(
+                        'Дата рождения',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )),
+                  Expanded(flex: 1, child: Container())
                 ],
               ),
             ),

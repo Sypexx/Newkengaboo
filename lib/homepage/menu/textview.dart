@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kengaboo/homepage/menu/choose.dart';
 import 'package:kengaboo/homepage/data/texts.dart';
-import 'package:kengaboo/homepage/data/chooses.dart';
 import 'package:kengaboo/homepage/data/content.dart' as globals;
 
 class TextView extends StatefulWidget {
@@ -73,7 +72,7 @@ class _TextViewState extends State<TextView> {
                       vertical: bottomBarHeight * 0.5),
                   children: [
                     Text(
-                      SomeText.scenario[0],
+                      globals.currentText,
                       textAlign: TextAlign.center,
                       style: const TextStyle(
                           color: Colors.black,
