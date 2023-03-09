@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kengaboo/authpage/logpage.dart';
 import 'package:kengaboo/homepage/startpage.dart';
 
 void main() {
@@ -75,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: () {
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => const HomePage()),
+                      MaterialPageRoute(builder: (context) => const LogPage()),
                     );
                   },
                   child: const Text('· Начать ·',
